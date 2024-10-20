@@ -45,20 +45,26 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "title": {
+                    "example": "One Fish Two Fish Red Fish Blue Fish"
+                  },
                   "firstName": {
-                    "example": null
+                    "example": "Dr. Seuss"
                   },
                   "lastName": {
                     "example": null
                   },
-                  "email": {
-                    "example": null
+                  "series": {
+                    "example": "Chronicals of Narnia"
                   },
-                  "favoriteColor": {
-                    "example": null
+                  "genre": {
+                    "example": "Children's"
                   },
-                  "birthday": {
-                    "example":  null
+                  "pYear": {
+                    "example":  "1960"
+                  },
+                  "age": {
+                    "example": "3-7"
                   }
                 }
               }
@@ -111,19 +117,25 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "title": {
+                    "example": "any"
+                  },
                   "firstName": {
                     "example": "any"
                   },
                   "lastName": {
                     "example": "any"
                   },
-                  "email": {
+                  "series": {
                     "example": "any"
                   },
-                  "favoriteColor": {
+                  "genre": {
                     "example": "any"
                   },
-                  "birthday": {
+                  "pYear": {
+                    "example": "any"
+                  },
+                  "age": {
                     "example": "any"
                   }
                 }
