@@ -46,7 +46,7 @@ const create = async (req, res, next) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     series: req.body.series,
-    genera: req.body.genera,
+    genre: req.body.genre,
     pYear: req.body.pYear,
     age: req.body.age,
   };
@@ -70,7 +70,7 @@ const update = async (req, res, next) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     series: req.body.series,
-    genera: req.body.genera,
+    genre: req.body.genre,
     pYear: req.body.pYear,
     age: req.body.age,
   };
@@ -80,7 +80,7 @@ const update = async (req, res, next) => {
     .collection('books')
     .replaceOne({ _id: userId }, book);
   if (result.acknowledged) {
-    res.status(204).send();
+    res.status(204).send(result);
   } else {
     res.status(500).json(result.error || 'Some error occurred while updating the book.');
   }
@@ -96,7 +96,7 @@ const deleteOne = async (req, res, next) => {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
-    .db('CBooklist')
+    .db('Booklist')
     .collection('books')
     .deleteOne({ _id: userId });
   if (result.acknowledged) {

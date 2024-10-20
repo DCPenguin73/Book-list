@@ -1,0 +1,67 @@
+// LOCALHOST
+### Get all books
+Get http://localhost:8080/books
+### get book by id
+Get http://localhost:8080/books/671477b901521c3426bd061f
+### create book
+POST http://localhost:8080/books/
+content-type: application/json
+
+{
+    "title": "Test",
+    "firstName": "Scott",
+    "lastName": "Card",
+    "series": "Ender's Game",
+    "genre": "Sci-Fi",
+    "pYear": "1825",
+    "age": "14+"
+}
+### update book
+Put http://localhost:8080/books/67147b829c5a2dfcea3bde7b
+content-type: application/json
+
+{
+    "title": "The Great Gatsby",
+    "firstName": "F. Scott",
+    "lastName": "Fitzgerald",
+    "series": "",
+    "genre": "Fiction",
+    "pYear": "1925",
+    "age": "13+"
+}
+### delete book
+Delete http://localhost:8080/books/67147b829c5a2dfcea3bde7b
+
+// REMOTE
+### Get all books
+Get https://cse-341-fall-2024.onrender.com/books
+### get book by id
+Get https://cse-341-fall-2024.onrender.com/books/671477b901521c3426bd061f
+### create book
+POST https://cse-341-fall-2024.onrender.com/books/
+content-type: application/json
+
+{
+    "title": "Test",
+    "firstName": "Scott",
+    "lastName": "Card",
+    "series": "Ender's Game",
+    "genre": "Sci-Fi",
+    "pYear": "1825",
+    "age": "14+"
+}
+### update book
+Put https://cse-341-fall-2024.onrender.com/books/67001a6a8ed082ae3f75a2e3
+content-type: application/json
+
+{
+      "title": "Ender's Game",
+    "firstName": "Scott",
+    "lastName": "Card",
+    "series": "Ender's Game",
+    "genre": "Sci-Fi",
+    "pYear": "1985",
+    "age": "14-17"
+}
+### delete book
+Delete https://cse-341-fall-2024.onrender.com/books/67001a6a8ed082ae3f75a2e3
