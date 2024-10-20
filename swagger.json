@@ -1,0 +1,164 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Book API",
+      "description": "Documentaion of Book API",
+      "version": "1.0.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/api-docs": {
+        "get": {
+          "summary": "Get Swagger JSON",
+          "description": "",
+          "responses": {
+            "default": {
+              "description": ""
+            }
+          }
+        }
+      },
+      "/books/": {
+        "get": {
+          "summary": "Get all books",
+          "description": "Get all books from database",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "summary": "Create a new book",
+          "description": "Add new book into database",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "example": null
+                  },
+                  "lastName": {
+                    "example": null
+                  },
+                  "email": {
+                    "example": null
+                  },
+                  "favoriteColor": {
+                    "example": null
+                  },
+                  "birthday": {
+                    "example":  null
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Created"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      },
+      "/books/{id}": {
+        "get": {
+          "summary": "Get a book by id",
+          "description": "Get a book by id from database",
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "put": {
+          "summary": "Update a book by id",
+          "description": "Update a book by id from database",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "in": "body",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "example": "any"
+                  },
+                  "lastName": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
+                  "favoriteColor": {
+                    "example": "any"
+                  },
+                  "birthday": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        },
+        "delete": {
+          "summary": "Delete a book by id",
+          "description": "Delete a book by id from database",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          }
+        }
+      }
+    }
+  }
