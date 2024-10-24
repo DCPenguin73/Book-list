@@ -5,7 +5,7 @@
       "description": "Documentaion of Book API",
       "version": "1.0.0"
     },
-    "host": "localhost:8080",
+    
     "basePath": "/",
     "schemes": [
       "http"
