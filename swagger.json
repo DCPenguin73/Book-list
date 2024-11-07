@@ -3,6 +3,14 @@
     "info": {
       "title": "Book API",
       "description": "Documentaion of Book API",
+      "securitySchemes": {
+        "OpenID": {
+          "type": "openIdConnect",
+          "openIdConnectUrl": "https://dev-chzyktgeb1bxu54p.us.auth0.com",
+          "description": "OpenID Connect",
+          "flow": "implicit"
+        }
+      },
       "version": "1.0.0"
     },
     
@@ -19,6 +27,30 @@
           "responses": {
             "default": {
               "description": ""
+            }
+          }
+        }
+      },
+      "/": {
+        "get": {
+          "summary": "Get an authentication state",
+          "description": "Retrieve authentication state",
+          "responses": {
+            "200": {
+              "description": "A successful response with authentication state"
+            }
+          }
+        }
+      },
+      "/profile": {
+        "get": {
+          "summary": "Get a user profile",
+          "description": "Retrieve user profile",
+          "security": {
+            "- OpenID": []},
+          "responses": {
+            "200": {
+              "description": "A successful response with user profile"
             }
           }
         }
